@@ -2212,6 +2212,7 @@ footer::before {
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .rera-text-info {
@@ -2292,25 +2293,32 @@ footer::before {
 
   .rera-content-wrapper {
     gap: 15px;
-    align-items: center; /* Keep centered vertically with QR */
+    justify-content: flex-end; /* Keep content aligned to the right */
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: right;
   }
 
   .rera-text-info {
-    text-align: left; /* Switch to left align for better readability when cramped */
+    text-align: right;
+    flex: 1 1 auto;
+    max-width: 720px;
   }
 
   .rera-row {
-    justify-content: flex-start;
-    display: block; /* Allow rows to act as blocks but contents stay inline */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
     margin-bottom: 6px;
   }
 
   .info-item {
-    padding: 0;
-    margin-right: 8px;
-    display: inline-block; /* Keep items in same row until they naturally wrap */
+    padding: 0 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 12px; /* Reduced text size */
-    width: auto; /* Ensure it doesn't force 100% width */
   }
 
   .info-item:not(:last-child)::after {
