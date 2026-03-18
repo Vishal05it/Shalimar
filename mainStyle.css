@@ -2338,8 +2338,8 @@ footer::before {
   }
 
   .rera-qr-code img {
-    height: 60px; /* Smaller QR */
-    width: 60px;
+    height: 80px; /* Smaller QR */
+    width: 80px;
   }
 }
 
@@ -2379,7 +2379,7 @@ footer::before {
   }
 
   .rera-qr-code img {
-    height: 35px; /* Smaller QR */
-    width: 35px;
+    height: 65px; /* Smaller QR */
+    width: 65px;
   }
 }
