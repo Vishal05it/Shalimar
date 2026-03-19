@@ -1635,11 +1635,305 @@ footer::before {
   margin: 0 auto;
 }
 
+.footer-branding {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-branding-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.branding-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.branding-logo {
+  width: 48px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
+}
+
+.branding-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.branding-subtext {
+  font-size: 14px;
+  color: rgba(17, 24, 39, 0.85);
+  font-weight: 600;
+}
+
 .channel-partner img {
   max-width: 120px;
   margin-bottom: 20px;
   filter: brightness(0) invert(1);
   opacity: 0.9;
+}
+
+/* ========== SHALIMAR CORP INFO SECTION ========== */
+.shalimar-info {
+  background: var(--light-bg);
+  padding: 60px 20px 80px;
+  color: var(--text-dark);
+}
+
+.shalimar-info__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.shalimar-info__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 44px);
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.shalimar-info__decor {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--secondary-color),
+    transparent
+  );
+}
+
+.shalimar-info__text {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.8;
+  max-width: 950px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: rgba(20, 30, 45, 0.9);
+}
+
+.bank-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px dashed rgba(30, 58, 138, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.bank-card__content {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shalimar-corp-bar {
+  margin-top: 40px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(30, 58, 138, 0.23);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+}
+
+.shalimar-corp-bar__inner {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.shalimar-corp-bar__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.shalimar-corp-bar__logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 18px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); */
+}
+
+.shalimar-corp-bar__partner {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(20, 30, 45, 0.85);
+}
+
+.bank-card__details {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bank-card__details p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(20, 30, 45, 0.9);
+}
+
+.bank-card__details p strong {
+  display: inline-block;
+  min-width: 170px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .shalimar-info {
+    padding: 50px 15px 70px;
+  }
+
+  .shalimar-info__title {
+    font-size: 32px;
+  }
+
+  .shalimar-info__text {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .bank-card {
+    padding: 30px 22px;
+  }
+
+  .bank-card__content {
+    gap: 25px;
+  }
+
+  .shalimar-corp-bar {
+    padding: 18px 18px;
+  }
+
+  .shalimar-corp-bar__inner {
+    gap: 14px;
+  }
+
+  .shalimar-corp-bar__logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .shalimar-corp-bar__title {
+    font-size: 16px;
+  }
+
+  .shalimar-corp-bar__partner {
+    font-size: 14px;
+  }
+
+  .bank-card__details p strong {
+    min-width: 160px;
+    font-size: 13px;
+  }
+
+  .bank-card__details p {
+    font-size: 13px;
+  }
+
+  .footer-branding-inner {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .branding-text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .branding-subtext {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .shalimar-info {
+    padding: 40px 12px 60px;
+  }
+
+  .shalimar-info__title {
+    font-size: 26px;
+  }
+
+  .bank-card__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .bank-card__details p strong {
+    min-width: 140px;
+  }
+
+  .footer-branding-inner {
+    gap: 10px;
+  }
+
+  .branding-logo {
+    width: 40px;
+  }
+
+  .branding-text {
+    font-size: 14px;
+  }
+
+  .branding-subtext {
+    font-size: 13px;
+  }
+
+  .shalimar-corp-bar {
+    padding: 14px 16px;
+  }
+
+  .shalimar-corp-bar__inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .shalimar-corp-bar__logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .shalimar-corp-bar__title {
+    font-size: 15px;
+  }
+
+  .shalimar-corp-bar__partner {
+    font-size: 14px;
+  }
 }
 
 /* ========== MODAL ========== */
@@ -2381,274 +2675,5 @@ footer::before {
   .rera-qr-code img {
     height: 65px; /* Smaller QR */
     width: 65px;
-  }
-}
-/* ABOUT SHALIMAR CORP SECTION */
-.about-section {
-  background: linear-gradient(135deg, var(--light-bg) 0%, #f0f4f8 100%);
-  padding: 60px 20px;
-  position: relative;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.about-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.about-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(28px, 5vw, 42px);
-  color: var(--primary-color);
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.about-divider {
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--secondary-color),
-    transparent
-  );
-  margin: 0 auto;
-  border-radius: 2px;
-}
-
-.about-content {
-  margin-bottom: 50px;
-}
-
-.about-description {
-  font-size: clamp(14px, 2vw, 16px);
-  color: var(--text-dark);
-  line-height: 1.8;
-  text-align: center;
-  font-weight: 400;
-  max-width: 1000px;
-  margin: 0 auto;
-  letter-spacing: 0.3px;
-}
-
-.company-details {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  margin-bottom: 50px;
-}
-
-.details-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.details-column {
-  padding: 20px 0;
-  width: 100%;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px;
-  border-left: 4px solid var(--secondary-color);
-  background: rgba(212, 175, 55, 0.02);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.detail-item:hover {
-  background: rgba(212, 175, 55, 0.05);
-  transform: translateX(4px);
-}
-
-.detail-label {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.detail-value {
-  font-size: 14px;
-  color: var(--text-dark);
-  font-weight: 500;
-}
-
-.about-footer {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 2px solid rgba(212, 175, 55, 0.2);
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-logo-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.footer-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.1);
-}
-
-.landmark-link {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.landmark-link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--secondary-color);
-  transition: width 0.3s ease;
-}
-
-.landmark-link:hover::after {
-  width: 100%;
-}
-
-.channel-partner {
-  font-size: 14px;
-  color: var(--text-light);
-  font-weight: 600;
-  letter-spacing: 0.3px;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 40px 15px;
-  }
-
-  .about-title {
-    font-size: 28px;
-  }
-
-  .company-details {
-    padding: 25px 20px;
-  }
-
-  .details-grid {
-    gap: 15px;
-  }
-
-  .detail-item {
-    padding: 10px;
-  }
-
-  .detail-label {
-    font-size: 12px;
-  }
-
-  .detail-value {
-    font-size: 13px;
-  }
-
-  .footer-content {
-    gap: 15px;
-    flex-direction: column;
-  }
-
-  .footer-logo-section {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-logo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .landmark-link {
-    font-size: 22px;
-  }
-
-  .channel-partner {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 30px 12px;
-  }
-
-  .about-title {
-    font-size: 22px;
-  }
-
-  .about-description {
-    font-size: 14px;
-  }
-
-  .company-details {
-    padding: 20px 15px;
-  }
-
-  .details-grid {
-    gap: 22px;
-  }
-
-  .detail-item {
-    padding: 8px;
-    border-left-width: 3px;
-  }
-
-  .detail-label {
-    font-size: 11px;
-  }
-
-  .detail-value {
-    font-size: 12px;
-  }
-
-  .footer-logo {
-    width: 85px !important;
-    height: 85px !important;
   }
 }
