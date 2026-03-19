@@ -2383,3 +2383,272 @@ footer::before {
     width: 65px;
   }
 }
+/* ABOUT SHALIMAR CORP SECTION */
+.about-section {
+  background: linear-gradient(135deg, var(--light-bg) 0%, #f0f4f8 100%);
+  padding: 60px 20px;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--secondary-color),
+    transparent
+  );
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.about-content {
+  margin-bottom: 50px;
+}
+
+.about-description {
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text-dark);
+  line-height: 1.8;
+  text-align: center;
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 auto;
+  letter-spacing: 0.3px;
+}
+
+.company-details {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 50px;
+}
+
+.details-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.details-column {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border-left: 4px solid var(--secondary-color);
+  background: rgba(212, 175, 55, 0.02);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateX(4px);
+}
+
+.detail-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.about-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+.landmark-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.landmark-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.landmark-link:hover::after {
+  width: 100%;
+}
+
+.channel-partner {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .company-details {
+    padding: 25px 20px;
+  }
+
+  .details-grid {
+    gap: 15px;
+  }
+
+  .detail-item {
+    padding: 10px;
+  }
+
+  .detail-label {
+    font-size: 12px;
+  }
+
+  .detail-value {
+    font-size: 13px;
+  }
+
+  .footer-content {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .footer-logo-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .landmark-link {
+    font-size: 22px;
+  }
+
+  .channel-partner {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 12px;
+  }
+
+  .about-title {
+    font-size: 22px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .company-details {
+    padding: 20px 15px;
+  }
+
+  .details-grid {
+    gap: 22px;
+  }
+
+  .detail-item {
+    padding: 8px;
+    border-left-width: 3px;
+  }
+
+  .detail-label {
+    font-size: 11px;
+  }
+
+  .detail-value {
+    font-size: 12px;
+  }
+
+  .footer-logo {
+    width: 85px !important;
+    height: 85px !important;
+  }
+}
