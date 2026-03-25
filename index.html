@@ -147,17 +147,34 @@
           aria-label="Close modal"
           onclick="closeModal()"
         >
-          &times;
+          ✕
         </button>
         <div class="modal-header">
-          <h3 id="modalTitle">RERA No: UPRERAAGT17933</h3>
           <img
             src="logo211.png"
             alt="Shalimar One World Logo"
             class="modal-logo"
             loading="lazy"
           />
+          <h2 id="modalTitle" class="modal-title">Unlock Shalimar: Available Units, Payment Plans & More</h2>
         </div>
+
+        <!-- Benefits Section -->
+        <div class="modal-benefits">
+          <div class="benefit-item">
+            <i class="fa fa-phone"></i>
+            <p>Instant Callback &<br>Expert Guidance</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fa fa-home"></i>
+            <p>Explore Availability<br>& Price</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fa fa-key"></i>
+            <p>Schedule Your<br>Private Tour</p>
+          </div>
+        </div>
+
         <form class="modal-form" id="popupForm">
           <div class="floating-group">
             <input
@@ -167,38 +184,39 @@
               required
               aria-required="true"
             />
-            <label for="popupName">Name*</label>
+            <label for="popupName">Name</label>
             <span class="error-message" id="popupNameError"
               >Name is required</span
             >
           </div>
 
-          <div class="floating-group">
+          <div class="floating-group phone-group">
+            <span class="country-code">🇮🇳 +91</span>
             <input
               type="tel"
               id="popupPhone"
-              placeholder=" "
+              placeholder="Enter Phone Number"
               maxlength="10"
               pattern="[6-9][0-9]{9}"
               required
               aria-required="true"
             />
-            <label for="popupPhone">Phone*</label>
             <span class="error-message" id="popupPhoneError"
               >Enter a valid 10-digit phone number</span
             >
           </div>
 
           <div class="floating-group">
-            <select id="popupRange" name="range" required>
-              <option value="">*</option>
-              <option value="1.3-2">₹1.3 Cr to ₹2 Cr</option>
-              <option value="2-3">₹2 Cr to ₹3 Cr</option>
-              <option value="3-4">₹3 Cr to ₹4 Cr</option>
-            </select>
-            <label for="popupRange">Select your budget range</label>
-            <span class="error-message" id="popupRangeError"
-              >Please select a range</span
+            <input
+              type="email"
+              id="popupEmail"
+              placeholder=" "
+              required
+              aria-required="true"
+            />
+            <label for="popupEmail">E-mail</label>
+            <span class="error-message" id="popupEmailError"
+              >Enter a valid email address</span
             >
           </div>
 
@@ -210,13 +228,13 @@
               aria-required="true"
               required
             />
-            <label for="popupTerms" style="color: white;">I accept the <a href="terms.html" target="_blank" style="color: #EAD48A;">Terms and Conditions</a>*</label>
+            <label for="popupTerms">I accept the <a href="terms.html" target="_blank">Terms and Conditions</a>*</label>
             <span class="error-message" id="popupTermsError"
               >You must accept the Terms and Conditions</span
             >
           </div>
           
-          <button type="submit">Submit Enquiry</button>
+          <button type="submit" class="modal-submit-btn">Submit ↗</button>
         </form>
       </div>
     </div>
@@ -1431,6 +1449,7 @@
           e.preventDefault();
           const name = document.getElementById("popupName").value.trim();
           const phone = document.getElementById("popupPhone").value.trim();
+          const email = document.getElementById("popupEmail").value.trim();
           const termsCheckbox = document.getElementById("popupTerms");
 
           let isValid = true;
@@ -1446,6 +1465,12 @@
           } else {
             showError("popupPhone", false);
           }
+          if (!validateEmail(email)) {
+            showError("popupEmail");
+            isValid = false;
+          } else {
+            showError("popupEmail", false);
+          }
           if (!termsCheckbox.checked) {
             showError("popupTerms");
             isValid = false;
@@ -1460,7 +1485,7 @@
 const formData = {
   Name: name,
   Phone: phone,
-  Email: "",
+  Email: email,
   Range: range,
   Message: "Popup Form Submission",
 };
