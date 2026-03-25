@@ -82,13 +82,6 @@ h6 {
   right: 30px;
 }
 
-/* 2. RAISED POSITION (triggered when JavaScript adds this class) */
-body.search-is-sticky .call-button,
-body.search-is-sticky .whatsapp-button {
-  bottom: 140px !important;
-  /* Moves up to clear the search bar */
-}
-
 .fixed-buttons img {
   height: 60px;
   width: auto;
@@ -654,102 +647,7 @@ nav {
 }
 
 /* ========== ENHANCED SEARCH SECTION ========== */
-.search-section {
-  padding: 0 20px 50px;
-  margin-top: -60px;
-  position: relative;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
-
-/* When form is sticky at bottom of screen */
-.search-section.sticky {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 0;
-  padding: 0;
-  z-index: 999;
-  animation: slideUp 0.3s ease;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* When form should be hidden (near footer) */
-.search-section.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Adjust container styling when sticky */
-.search-section.sticky .container {
-  border-radius: 0;
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.25);
-  border-top: 3px solid var(--secondary-color);
-  max-width: 100%;
-  padding: 20px 40px;
-}
-
-/* Mobile adjustments for sticky form */
-@media (max-width: 768px) {
-  .search-section.sticky .container {
-    padding: 20px;
-  }
-
-  .search-section.sticky .search-form {
-    gap: 15px;
-  }
-
-  /* DISABLE STICKY ON MOBILE */
-  .search-section.sticky {
-    position: relative !important;
-    bottom: auto !important;
-    animation: none !important;
-    padding: 0 20px 50px !important;
-    margin-top: -60px !important;
-    box-shadow: none !important;
-    border-top: none !important;
-  }
-
-  .search-section.sticky .container {
-    border-radius: 24px !important;
-    border: 1px solid rgba(212, 175, 55, 0.2) !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15) !important;
-  }
-}
-
-.search-section .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(255, 255, 255, 0.98) 100%
-  );
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(212, 175, 55, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  position: relative;
-  overflow: hidden;
-}
+/* REMOVED - Sticky footer form has been removed */
 
 /* REMOVED SHIMMER ANIMATION */
 
@@ -885,64 +783,6 @@ nav {
 
 .floating-group select::-ms-expand {
   display: none;
-}
-
-.search-form {
-  display: flex;
-  gap: 20px;
-  align-items: flex-end;
-}
-
-.search-form .floating-group {
-  flex: 1;
-}
-
-.search-form button {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
-  color: var(--white);
-  border: none;
-  padding: 0 40px;
-  cursor: pointer;
-  font-weight: 700;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  height: 58px;
-  margin-bottom: 0;
-  flex-shrink: 0;
-  min-width: 140px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 14px;
-  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.search-form button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s ease;
-}
-
-.search-form button:hover::before {
-  left: 100%;
-}
-
-.search-form button:hover,
-.search-form button:focus {
-  background: linear-gradient(135deg, #1a2f6f 0%, var(--primary-color) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
 }
 
 .error-message {
@@ -2265,6 +2105,54 @@ footer::before {
 .modal-form button[type="submit"]:focus {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+}
+
+/* ========== CHECKBOX GROUP STYLING ========== */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.checkbox-group label {
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-group label a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.checkbox-group label a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.checkbox-group .error-message {
+  margin-top: 8px;
+  grid-column: 1 / -1;
 }
 
 /* ========== RESPONSIVE ========== */
