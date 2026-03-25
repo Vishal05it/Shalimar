@@ -191,13 +191,22 @@ nav {
 .nav-menu a {
   color: var(--white);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
   transition: all 0.3s ease;
   padding: 8px 16px;
   position: relative;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-menu a i {
+  font-size: 14px;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
 .nav-menu a::before {
@@ -228,6 +237,12 @@ nav {
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
+.nav-menu a:hover i,
+.nav-menu a:focus i {
+  color: var(--secondary-color);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -250,8 +265,8 @@ nav {
   background:
     linear-gradient(
       135deg,
-      rgba(15, 23, 42, 0.75) 0%,
-      rgba(30, 58, 138, 0.65) 100%
+      rgba(15, 23, 42, 0.45) 0%,
+      rgba(30, 58, 138, 0.4) 100%
     ),
     url("p10.jpg") center/cover no-repeat fixed;
   min-height: 95vh;
@@ -280,6 +295,140 @@ nav {
     rgba(212, 175, 55, 0.1) 100%
   );
   pointer-events: none;
+}
+.heroProperty {
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 58, 138, 1) 100%),
+    url("p10.jpg") center/cover no-repeat fixed;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 80px 20px 60px;
+  position: relative;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+}
+
+.heroProperty::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(30, 58, 138, 0.1) 0%,
+    transparent 50%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+/* ========== PROPERTY GRID CARDS ========== */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease 0.3s both;
+  position: relative;
+  z-index: 1;
+}
+
+.property-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.property-card:hover img {
+  transform: scale(1.08);
+}
+
+.property-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4));
+  padding: 30px 20px 25px;
+  color: var(--white);
+  z-index: 2;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.property-card:hover .property-card-content {
+  transform: translateY(-5px);
+}
+
+.property-card-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: var(--white);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.property-card-content p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.view-details-btn {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  align-self: flex-start;
+}
+
+.view-details-btn:hover,
+.view-details-btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #f0d77e 0%, var(--secondary-color) 100%);
 }
 
 .hero h1 {
@@ -334,6 +483,61 @@ nav {
   font-size: 32px;
   display: inline-block;
   text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.pricing-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin: 30px auto 50px;
+  animation: fadeInUp 1s ease 0.3s both;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.pricing-box {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 25px 35px;
+  min-width: 280px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.pricing-box:hover {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+}
+
+.pricing-label {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pricing-amount {
+  font-size: 42px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin: 15px 0;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  font-family: "Montserrat", sans-serif;
+}
+
+.pricing-subtext {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .property-nav {
@@ -2102,6 +2306,35 @@ footer::before {
     min-width: 0;
   }
 
+  .property-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .property-card {
+    height: 300px;
+  }
+
+  .property-card-content {
+    padding: 25px 18px 20px;
+  }
+
+  .property-card-content h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+
+  .property-card-content p {
+    font-size: 14px;
+  }
+
+  .view-details-btn {
+    padding: 9px 20px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
   .search-section .container {
     padding: 30px 20px;
   }
@@ -2257,6 +2490,33 @@ footer::before {
 
   .featured-card-image {
     height: 220px;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .property-card {
+    height: 280px;
+  }
+
+  .property-card-content {
+    padding: 20px 15px;
+  }
+
+  .property-card-content h3 {
+    font-size: 22px;
+  }
+
+  .property-card-content p {
+    font-size: 13px;
+  }
+
+  .view-details-btn {
+    padding: 8px 18px;
+    font-size: 11px;
   }
 }
 

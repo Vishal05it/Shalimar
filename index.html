@@ -238,15 +238,15 @@
           <span></span>
         </button>
         <ul class="nav-menu" role="menubar">
-          <li role="none"><a href="#home" role="menuitem">Home</a></li>
-          <li role="none"><a href="#about" role="menuitem">About Us</a></li>
+          <li role="none"><a href="#home" role="menuitem"><i class="fa fa-home"></i> Home</a></li>
+          <li role="none"><a href="#about" role="menuitem"><i class="fa fa-info-circle"></i> About Us</a></li>
           <li role="none">
-            <a href="#properties" role="menuitem">Our Properties</a>
+            <a href="#properties" role="menuitem"><i class="fa fa-building"></i> Our Properties</a>
           </li>
-          <li role="none"><a href="#floor" role="menuitem">Floor Plans</a></li>
-          <li role="none"><a href="#contact" role="menuitem">Contact Us</a></li>
-          <li role="none"><a href="#location" role="menuitem">Location</a></li>
-          <li role="none"><a href="tel:+918808698649" role="menuitem"> Call : +918808698649</a></li>
+          <li role="none"><a href="#floor" role="menuitem"><i class="fa fa-th"></i> Floor Plans</a></li>
+          <li role="none"><a href="#contact" role="menuitem"><i class="fa fa-envelope"></i> Contact Us</a></li>
+          <li role="none"><a href="#location" role="menuitem"><i class="fa fa-map-marker"></i> Location</a></li>
+          <li role="none"><a href="tel:+918808698649" role="menuitem"><i class="fa fa-phone"></i> Call : +918808698649</a></li>
           
         </ul>
       </nav>
@@ -255,33 +255,24 @@
     <main id="main-content">
       <section class="hero" id="home">
         <h1>Welcome To <span class="text-change">Shalimar</span> One World</h1>
-        <p>
+        <div class="pricing-boxes">
+          <div class="pricing-box">
+            <div class="pricing-label">Villas From</div>
+            <div class="pricing-amount">₹1.30 Cr*</div>
+            <div class="pricing-subtext">starting from</div>
+          </div>
+          <div class="pricing-box">
+            <div class="pricing-label">Premium Apartments From</div>
+            <div class="pricing-amount">₹1.55 Cr*</div>
+            <div class="pricing-subtext">starting from</div>
+          </div>
+        </div>
+        <!-- <p>
           2BHK, 2BHK + Study , 3BHK & 3 BHK + Servant Room, 4BHK + Servant Room Apartments<br />
           Starting From <strong>₹ 1.30 Cr*</strong><br />
           Gomti Nagar Extension, Lucknow
-        </p>
-        <div class="property-nav">
-           <button onclick="scrollToSection('shalimar-marbella')">
-            Shalimar Marbella
-          </button>
-          <button onclick="scrollToSection('twenty-one')">Shalimar Twenty One</button>
-           <button onclick="scrollToSection('pinnacle')">
-            Shalimar Pinnacle
-          </button>
-          <button onclick="scrollToSection('shalimar-valencia-country')">
-            Shalimar Valencia County
-          </button>
-           <button onclick="scrollToSection('valencia-tower')">
-            Shalimar Valencia Tower
-          </button>    
-          <button onclick="scrollToSection('sbd')">Shalimar SBD</button>
-           <button onclick="scrollToSection('shalimar-whispering-woods')">
-           Shalimar Whispering Woods
-          </button>
-          <button onclick="scrollToSection('belvedere-suites')">
-            Shalimar Belvedere Suites
-          </button>
-        </div>
+        </p> -->
+       
         <button class="enquire-btn" style="margin: 25px 0;" onclick="openModal()">
           Book Site with Us
         </button>
@@ -359,7 +350,74 @@
           </p>
         </div>
       </section>
-
+      <section class="heroProperty" id="homeProperty">
+       <div class="property-grid">
+           <div class="property-card" onclick="scrollToSection('shalimar-marbella')">
+            <img src="https://shalimar-one-world.propinvesta.site/Buildings.png" alt="Shalimar Marbella">
+            <div class="property-card-content">
+              <h3>Marbella</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+          <div class="property-card" onclick="scrollToSection('twenty-one')">
+            <img src="https://shalimar-one-world.propinvesta.site/twenty-one.jpg" alt="Shalimar Twenty One">
+            <div class="property-card-content">
+              <h3>Twenty One</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+           <div class="property-card" onclick="scrollToSection('pinnacle')">
+            <img src="https://shalimar-one-world.propinvesta.site/pinnacle.jpg" alt="Shalimar Pinnacle">
+            <div class="property-card-content">
+              <h3>Pinnacle</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+          <div class="property-card" onclick="scrollToSection('shalimar-valencia-country')">
+            <img src="https://shalimar-one-world.propinvesta.site/assets/images/lap1.webp" alt="Shalimar Valencia County">
+            <div class="property-card-content">
+              <h3>Valencia County</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+           <div class="property-card" onclick="scrollToSection('valencia-tower')">
+            <img src="https://shalimar-one-world.propinvesta.site/valencia%20tower.jpg.jpeg" alt="Shalimar Valencia Tower">
+            <div class="property-card-content">
+              <h3>Valencia Tower</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>    
+          <div class="property-card" onclick="scrollToSection('sbd')">
+            <img src="https://shalimar-one-world.propinvesta.site/sbd-commercial-img-internal-project.jpg.jpeg" alt="Shalimar SBD">
+            <div class="property-card-content">
+              <h3>SBD</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+           <div class="property-card" onclick="scrollToSection('shalimar-whispering-woods')">
+            <img src="https://shalimar-one-world.propinvesta.site/WISPPERING-WOODS-banner-img.jpg.jpeg" alt="Shalimar Whispering Woods">
+            <div class="property-card-content">
+              <h3>Whispering Woods</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+          <div class="property-card" onclick="scrollToSection('belvedere-suites')">
+            <img src="https://shalimar-one-world.propinvesta.site/assets/images/whiss.webp" alt="Shalimar Belvedere Suites">
+            <div class="property-card-content">
+              <h3>Belvedere Suites</h3>
+              <p>2, 3, 4 BHK Apartments</p>
+              <button class="view-details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+        </section>
       <section class="property-carousel-section">
         <div class="container">
           <h1 class="section-title">Shalimar One World Project</h1>
