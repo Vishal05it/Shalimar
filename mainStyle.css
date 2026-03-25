@@ -778,19 +778,19 @@ nav {
 
 .modal-form .floating-group,
 .form-row .floating-group {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 
 .floating-group input,
 .floating-group textarea {
   width: 100%;
-  padding: 24px 20px 8px;
+  padding: 20px 16px 6px;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
   font-size: 16px;
   background: #ffffff;
   outline: none;
-  height: 58px;
+  height: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -841,14 +841,14 @@ nav {
 /* Stylish select dropdown matching form design */
 .floating-group select {
   width: 100%;
-  padding: 24px 40px 8px 20px;
+  padding: 20px 40px 6px 16px;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
   font-size: 16px;
   background: #ffffff;
   color: #1e293b;
   outline: none;
-  height: 58px;
+  height: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   -webkit-appearance: none;
@@ -2278,7 +2278,7 @@ footer::before {
 
 .modal-content {
   background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
-  padding: 50px;
+  padding: 35px;
   border-radius: 24px;
   max-width: 480px;
   width: 100%;
@@ -2320,13 +2320,13 @@ footer::before {
 
 .modal-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .modal-header h3 {
   color: var(--white);
   font-size: 16px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -2348,8 +2348,8 @@ footer::before {
 }
 
 .modal-logo {
-  max-width: 120px;
-  margin-bottom: 25px;
+  max-width: 110px;
+  margin-bottom: 20px;
   filter: brightness(0) invert(1);
 }
 
@@ -2377,7 +2377,7 @@ footer::before {
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 @media (max-width: 480px) {
@@ -2416,7 +2416,7 @@ footer::before {
   background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
   color: #000;
   border: none;
-  padding: 16px;
+  padding: 13px;
   border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
@@ -2438,7 +2438,7 @@ footer::before {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 15px;
+  padding: 12px;
   background: rgba(212, 175, 55, 0.08);
   border-radius: 12px;
   border: 1px solid rgba(212, 175, 55, 0.2);
