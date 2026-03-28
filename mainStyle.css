@@ -3432,14 +3432,15 @@ footer::before {
   align-items: center;
   padding: 80px 60px;
   min-height: 100vh;
-  background: url("p10.jpg") center/cover no-repeat;
+  background: url("https://shalimar-one-world.propinvesta.site/pinnacle.jpg")
+    center/cover no-repeat;
   color: #fff;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: #1c2739af;
+  background: #1c2739e2;
 }
 
 .hero-left {
