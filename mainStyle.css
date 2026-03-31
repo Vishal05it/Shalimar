@@ -778,7 +778,7 @@ nav {
 
 .modal-form .floating-group,
 .form-row .floating-group {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .floating-group input,
@@ -1766,8 +1766,8 @@ nav {
 .form-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin-bottom: 1px;
 }
 
 .floating-group textarea {
@@ -3249,21 +3249,21 @@ footer::before {
 
 .rera-content-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 25px;
   flex-wrap: wrap;
 }
 
 .rera-text-info {
-  text-align: right;
+  text-align: center;
   flex: 1;
 }
 
 .rera-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 3px;
 }
 
@@ -3333,14 +3333,14 @@ footer::before {
 
   .rera-content-wrapper {
     gap: 10px; /* Reduced gap */
-    justify-content: flex-end; /* Keep content aligned to the right */
+    justify-content: center; /* Keep content aligned to the right */
     align-items: center;
     flex-wrap: nowrap; /* Prevent wrapping to keep QR beside content */
-    text-align: right;
+    text-align: center;
   }
 
   .rera-text-info {
-    text-align: right;
+    text-align: center;
     flex: 1 1 auto;
     max-width: 720px;
   }
@@ -3348,7 +3348,7 @@ footer::before {
   .rera-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 6px; /* Adjusted gap */
     margin-bottom: 4px; /* Reduced margin */
   }
